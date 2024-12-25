@@ -1,0 +1,42 @@
+﻿@model Categorie
+<form method="post" class="container mt-5" style="max-width: 600px;">
+    <div class="card shadow border-0">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Add Category</h4>
+        </div>
+        <div class="card-body">
+            <!-- Name Field -->
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input type="text"
+                        asp-for="Name"
+                       class="form-control"
+                       
+                       
+                       placeholder="Enter category name"
+                       required>
+            </div>
+
+            <!-- Display Order Field -->
+            <div class="mb-3">
+                <label for="DisplayOrder" class="form-label">Display Order</label>
+                <input type="number"
+                       class="form-control"
+                       asp-for="OrdreAffichage"
+                       placeholder="Enter display order"
+                       required>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary">
+                     Create
+                </button>
+                
+                <a class="btn btn-primary" asp-controller="Categorie" asp-action="Create">Back to Categories</a>
+
+                
+            </div>
+        </div>
+    </div>
+</form>
